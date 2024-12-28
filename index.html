@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
    <body>
-       <video id="video" autoplay loop width="100%" style="transform: scale(1.5);">
-           <source src="reward.mp4" type="video/mp4">
-           Sorry, your browser doesn't support embedded videos.
-       </video>
-       
-       <script>
+       <video autoplay loop width="100%">
+
+    <source src="reward.mp4"
+            type="video/mp4">
+
+    Sorry, your browser doesn't support embedded videos.
+</video>
+      <script>
          // Change the variables below to your liking
          const currentURL = "reward.mp4";
          const pageTitle = "Loading...";
@@ -23,24 +25,9 @@
          function onload() {
             setTitle();
             redirect();
-            
-            // Set volume to 60%
-            const video = document.getElementById("video");
-            video.volume = 0.6;  // Volume set to 60%
-            
-            // Set video to fullscreen
-            if (video.requestFullscreen) {
-                video.requestFullscreen();
-            } else if (video.mozRequestFullScreen) { // Firefox
-                video.mozRequestFullScreen();
-            } else if (video.webkitRequestFullscreen) { // Chrome and Safari
-                video.webkitRequestFullscreen();
-            } else if (video.msRequestFullscreen) { // IE/Edge
-                video.msRequestFullscreen();
-            }
          }
          
-         window.onload = onload;
+         window.onload = onload();
        </script>
    </body>
 </html>
